@@ -23,6 +23,12 @@ public class Lab3awsers {
 
         }
 
+        boolean pm = true;
+        boolean am = false;
+
+        if (pm){
+
         }
     }
 }
+
