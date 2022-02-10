@@ -2,14 +2,14 @@ public class Lab3awsers {
     public static void main(String[] args) {
 
         if (true){
-            System.out.print("Hi");
+            System.out.println("Hi");
         }
 
         if (!true){
             System.out.println("hi me llamo rick");
 
         }else{
-            System.out.print("who are you? ");
+            System.out.println("who are you? ");
         }
 
         if (!true) {
@@ -23,11 +23,27 @@ public class Lab3awsers {
 
         }
 
-        boolean pm = true;
-        boolean am = false;
+        int pm = 1 ;
+        int am = 2;
 
-        if (pm){
+        if (pm < am){
+            System.out.println("its afternoon");
+        }else{
+            System.out.println("its morning");
+        }
 
+        boolean toast = true;
+        boolean butter = true;
+
+        if (toast || butter){
+            System.out.println("your toast is readty");
+        }
+
+        boolean cheese = true;
+        boolean trap   = true;
+
+        if (cheese && trap){
+            System.out.println("your mouse trap is ready");
         }
     }
 }
