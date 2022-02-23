@@ -34,6 +34,7 @@ public class Main {
 
     static void dry_inventory() {
         // Your DRY Solution goes here!
+        
     }
 
     static void wet_inventory() {
