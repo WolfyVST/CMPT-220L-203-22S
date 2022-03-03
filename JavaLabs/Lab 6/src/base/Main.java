@@ -10,6 +10,7 @@ public class Main {
      *
      * Our Goals are:
      * - Creating an Array
+     
      * - Creating an ArrayList
      * - Creating an LinkedList
      * - Creating an Queue
@@ -21,7 +22,15 @@ public class Main {
      * - Populate the data types
      * - Print out the Linear Data Types
      */
+    
     public static void main(String[] args) {
+        
+            // write your code here
+        plants fred = new plants(true,"Lily","fred");
+                
+        System.out.println(fred.name);
+                
+            
         // Create an Array, Populate it, and Print it out
         // Create an ArrayList, Populate it, and Print it out
         // Create an LinkedList, Populate it, and Print it out
