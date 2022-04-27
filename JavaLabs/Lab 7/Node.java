@@ -1,5 +1,3 @@
-package base;
-
 public class Node {
     int value;
     Node nNode;
