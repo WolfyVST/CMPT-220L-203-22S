@@ -1,9 +1,11 @@
 public class Main {
-    public static voif main(string[] args){
+    public static Void main(string[] args){
         BST a =new Bst();
         Node root = null;
 
-        a.insert(root,8);
+        root = a.insert(root,8);
+        root = a.insert(root,3);
+
     }
 }
 class  Node {
@@ -14,14 +16,14 @@ class  Node {
 }
 class BST {
 
-    Public Node createNewNode(int k){
+    public Node createNewNode(int k){
         Node a = new Node();
         a.date = k;
         a.left = null;
         a.right = null;
         return a;
     }
-    public Node insert (Node node, int val){
+    public Node insert(Node node, int val){
         if (node == null) {
             return createNewNode(val);
         }

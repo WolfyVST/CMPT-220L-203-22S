@@ -1,7 +1,8 @@
 {
     "java.project.sourcePaths": [
+        "JavaLabs/Lab 7",
         "JavaLabs/Lab 5/src/base",
         "JavaLabs/Lab 4/src",
-        "JavaLabs/Lab 7"
+        "BST Project/untitled"
     ]
 }
