@@ -1,3 +1,8 @@
+package base;
+import java.util.LinkedList;
+import java.util.Queue;
+
+
 public class DeleteNode {
 
 	Node root;
@@ -233,56 +238,92 @@ public class DeleteNode {
 
 	}
 
-	public static void main(String[] args) {
+		public int findMax(Node node)
+		{
+			if (node == null)
+				return Integer.MIN_VALUE;
+	
+			int res = node.key;
+			int lres = findMax(node.leftChild);
+			int rres = findMax(node.rightChild);
+	
+			if (lres > res)
+				res = lres;
+			if (rres > res)
+				res = rres;
+			return res;
+		}
 
-		DeleteNode theTree = new DeleteNode();
+		public int findMin(Node node)
+    {
+        if (node == null)
+            return Integer.MAX_VALUE;
 
-		theTree.addNode(50, "Boss");
+        int res = node.key;
+        int lres = findMin(node.leftChild);
+        int rres = findMin(node.rightChild);
 
-		theTree.addNode(25, "Vice President");
+        if (lres < res)
+            res = lres;
+        if (rres < res)
+            res = rres;
+        return res;
+    }
+	
+	int maxHeight(Node node)
+    {
+        if (node == null)
+            return 0;
+        else
+        {
+            int lHeight = maxHeight(node.leftChild);
+            int rHeight = maxHeight(node.rightChild);
+            if (lHeight > rHeight)
+                return (lHeight + 1);
+            else
+                return (rHeight + 1);
+        }
+    }
 
-		theTree.addNode(15, "Office Manager");
+	static void bSearch(Node node){
+		Queue<Node> q = new LinkedList<Node>();
 
-		theTree.addNode(30, "Secretary");
+		q.add(node);
+	
+        while (!q.isEmpty()) {
 
-		theTree.addNode(75, "Sales Manager");
+            node = q.remove();
 
-		theTree.addNode(85, "Salesman 1");
+            System.out.print(" " + node.key);
 
-		System.out.println("\nNode with the key 75");
+            if (node.leftChild != null){
 
-		System.out.println(theTree.findNode(75));
+                q.add(node.leftChild);
 
-		System.out.println("Remove Key 25");
+			}
 
-		theTree.remove(25);
+            if (node.rightChild != null){
 
-		System.out.println(theTree.findNode(25));
+                q.add(node.rightChild);
 
-		theTree.inOrderTraverseTree(theTree.root);
-
+			}
+		}
 	}
+
+	static void dSearch(Node node){
+
+		if (node == null)
+		{
+			return;
+		}
+
+		System.out.println(node.key);
+
+		dSearch(node.leftChild);
+
+		dSearch(node.rightChild);
+	}
+
 }
 
-class Node {
 
-	int key;
-	String name;
-
-	Node leftChild;
-	Node rightChild;
-
-	Node(int key, String name) {
-
-		this.key = key;
-		this.name = name;
-
-	}
-
-	public String toString() {
-
-		return name + " has the key " + key;
-
-	}
-
-}
