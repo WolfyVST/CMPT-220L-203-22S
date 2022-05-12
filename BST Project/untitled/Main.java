@@ -2,14 +2,14 @@ public class Main {
     public static Void main(string[] args){
         BST a =new Bst();
         Node root = null;
-
+        System.out.println("test");
         root = a.insert(root,8);
         root = a.insert(root,3);
 
     }
 }
 class  Node {
-    int Date
+    int Date; 
     Noda left;
     Node right;
 
